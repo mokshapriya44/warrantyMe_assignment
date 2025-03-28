@@ -1,17 +1,20 @@
 import React, { useState } from "react";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
 
-const LetterEditor = ({ onSave }) => {
-  const [content, setContent] = useState("");
+const TextEditor = ({ onSave }) => {
+  const [text, setText] = useState("");
 
   return (
     <div>
-      <h2>Create a Letter</h2>
-      <ReactQuill value={content} onChange={setContent} />
-      <button onClick={() => onSave(content)}>Save</button>
+      <textarea
+        rows="10"
+        cols="50"
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+      />
+      <br />
+      <button onClick={() => onSave(text)}>Save Letter</button>
     </div>
   );
 };
 
-export default LetterEditor;
+export default TextEditor;
