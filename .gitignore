@@ -25,5 +25,6 @@ yarn-error.log*
 
 backend/config/serviceAccountKey.json
 backend/config/credentials.json
+backend\config\google-auth.json
 
 
